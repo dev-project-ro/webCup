@@ -4,11 +4,22 @@ import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
-
+import { useLang } from "../translate/provider/I18nProvider";
+import { MdTranslate } from "react-icons/md";
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const { selectedLang, setLang } = useLang()
+  const changLang = () => {
+    if (selectedLang == 'fr') {
+      setLang('en');
+    }
+    if (selectedLang == 'en') {
+      setLang('fr');
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,6 +69,13 @@ const Navbar = () => {
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
+          <button
+            onClick={changLang}
+            aria-label="LangSwitcher"
+            className="flex gap-2 hover:text-white text-[18px] font-medium cursor-pointer"
+          >
+            <MdTranslate className="h-6 w-6" /> {selectedLang.toUpperCase()}
+          </button>
         </ul>
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
