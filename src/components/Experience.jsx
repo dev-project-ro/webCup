@@ -11,6 +11,7 @@ import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
+import { FormattedMessage } from "react-intl";
 
 const ExperienceCard = ({ experience }) => {
   return (
@@ -60,8 +61,8 @@ const Experience = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>What I have done so far</p>
-        <h2 className={styles.sectionHeadText}>Workflow d’Onirix</h2>
+        <p className={styles.sectionSubText}><FormattedMessage id="onirix-workflow-subtitle"/></p>
+        <h2 className={styles.sectionHeadText}><FormattedMessage id="onirix-workflow-title"/></h2>
       </motion.div>
 
       <div className="mt-20 flex flex-col">

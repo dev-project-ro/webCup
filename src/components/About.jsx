@@ -6,6 +6,7 @@ import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
+import { FormattedMessage } from "react-intl";
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className="xs:w-[250px] w-full">
@@ -40,14 +41,14 @@ const About = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Que fait Onirix ?</h2>
+        <h2 className={styles.sectionHeadText}><FormattedMessage id="national-dream-institute" /></h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        Explorez les profondeurs de votre subconscient grâce à la technologie révolutionnaire Onirix. Découvrez les messages cachés dans vos rêves et obtenez des prédictions personnalisées sur les événements à venir. Les symboles et les significations de vos rêves pourraient révéler des secrets sur votre vie, que notre équipe d'experts en analyse de rêves peut vous aider à interpréter. Plongez dans le monde fascinant de l'interprétation des rêves et découvrez ce que votre avenir vous réserve.
+        <FormattedMessage id="national-dream-institute-intro" />
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10 mb-20">
