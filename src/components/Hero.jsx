@@ -17,7 +17,7 @@ const Hero = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-          <FormattedMessage id="INNOVATION_TEXT" />  <span className="text-[#915EFF]">AI</span>
+          Innovation Through <span className="text-[#915EFF]">AI</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
           We leverage the power of artificial intelligence to build cognitive <br className="sm:block hidden" />
