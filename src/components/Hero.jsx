@@ -16,18 +16,18 @@ const Hero = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-          Innovation Through   <span className="text-[#915EFF]">AI</span>
+           Les rêves peuvent révéler votre avenir,   <span className="text-[#915EFF]">explorez-en les signification</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-          We leverage the power of artificial intelligence to build cognitive <br className="sm:block hidden" />
-          solutions, products, and platforms that help businesses automate their operations and solve their challenges with advanced AI technologies.
+          Explorez les profondeurs de votre subconscient grâce à la technologie révolutionnaire Onirix.  <br className="sm:block hidden" />
+          Découvrez les messages cachés dans vos rêves et obtenez des prédictions personnalisées sur les événements à venir. 
           </p>
         </div>
         <div className="flex flex-col justify-center items-center mt-5">
           <img
               src={github}
               alt="github"
-              className="image-AI w-[1500px] h-full object-contain"
+              className="image-AI w-[1200px] h-full object-contain"
           />
         </div>
       </div>

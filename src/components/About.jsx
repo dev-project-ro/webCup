@@ -24,7 +24,7 @@ const ServiceCard = ({ index, title, icon }) => (
         <img
           src={icon}
           alt="web-development"
-          className="w-16 h-16 object-contain"
+          className="w-[150px] object-contain"
         />
 
         <h3 className="text-white text-[20px] font-bold text-center">
@@ -40,18 +40,14 @@ const About = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+        <h2 className={styles.sectionHeadText}>Que fait Onirix ?</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+        Explorez les profondeurs de votre subconscient grâce à la technologie révolutionnaire Onirix. Découvrez les messages cachés dans vos rêves et obtenez des prédictions personnalisées sur les événements à venir. Les symboles et les significations de vos rêves pourraient révéler des secrets sur votre vie, que notre équipe d'experts en analyse de rêves peut vous aider à interpréter. Plongez dans le monde fascinant de l'interprétation des rêves et découvrez ce que votre avenir vous réserve.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
