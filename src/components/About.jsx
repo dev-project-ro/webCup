@@ -1,7 +1,7 @@
 import React from "react";
 import Tilt from "react-tilt";
 import { motion } from "framer-motion";
-
+import { pose } from "../assets";
 import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
@@ -50,11 +50,35 @@ const About = () => {
         Explorez les profondeurs de votre subconscient grâce à la technologie révolutionnaire Onirix. Découvrez les messages cachés dans vos rêves et obtenez des prédictions personnalisées sur les événements à venir. Les symboles et les significations de vos rêves pourraient révéler des secrets sur votre vie, que notre équipe d'experts en analyse de rêves peut vous aider à interpréter. Plongez dans le monde fascinant de l'interprétation des rêves et découvrez ce que votre avenir vous réserve.
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-10">
+      <div className="mt-20 flex flex-wrap gap-10 mb-20">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
+
+      <div className="grid grid-cols-2 gap-2">
+        <div className="col-span-1">
+          <img
+            src={pose}
+            alt="github"
+            className="onix w-[600px] h-full object-contain"
+          />
+        </div>
+        <div className="col-span-1">
+          <motion.div variants={textVariant()}>
+            <p className={styles.sectionSubText}>Introduction</p>
+            <h2 className={styles.sectionHeadText}>Que fait Onirix ?</h2>
+          </motion.div>
+          <motion.p
+            variants={fadeIn("", "", 0.1, 1)}
+            className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+          >
+            Explorez les profondeurs de votre subconscient grâce à la technologie révolutionnaire Onirix. Découvrez les messages cachés dans vos rêves et obtenez des prédictions personnalisées sur les événements à venir. Les symboles et les significations de vos rêves pourraient révéler des secrets sur votre vie, que notre équipe d'experts en analyse de rêves peut vous aider à interpréter. Plongez dans le monde fascinant de l'interprétation des rêves et découvrez ce que votre avenir vous réserve.
+          </motion.p>
+        </div>
+      </div>
+
+
     </>
   );
 };
