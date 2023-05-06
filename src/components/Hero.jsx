@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { github } from "../assets";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
+import { FormattedMessage } from "react-intl";
 
 const Hero = () => {
   return (
@@ -16,7 +17,7 @@ const Hero = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-          Innovation Through   <span className="text-[#915EFF]">AI</span>
+          <FormattedMessage id="INNOVATION_TEXT" />  <span className="text-[#915EFF]">AI</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
           We leverage the power of artificial intelligence to build cognitive <br className="sm:block hidden" />
