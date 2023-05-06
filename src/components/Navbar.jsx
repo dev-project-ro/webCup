@@ -72,7 +72,7 @@ const Navbar = () => {
           <button
             onClick={changLang}
             aria-label="LangSwitcher"
-            className="flex gap-2 hover:text-white text-[18px] font-medium cursor-pointer"
+            className="flex gap-1 hover:text-white text-[18px] font-medium cursor-pointer"
           >
             <MdTranslate className="h-6 w-6" /> {selectedLang.toUpperCase()}
           </button>
